@@ -28,12 +28,12 @@ colNum = 0
 incompleteList = []
 
 for col in newList[0]:
-    print '%-3s: %s' % (colNum, col)   # Print column indices for newList.
+    # print '%-3s: %s' % (colNum, col)   # Print column indices for newList.
     colNum += 1
 del newList[0]   # Delete non-data row.
 
 newListLen = len(newList)
-print "\nProcessing %s entries...\n" % (newListLen)
+print "\nProcessing %s entries from 2011 OBME database...\n" % (newListLen)
 
 numNotActive = 0
 numWrongLicense = 0
@@ -142,7 +142,7 @@ print "Wrong state        : %s" % (numWrongState)
 print "Wrong zip code     : %s" % (numWrongZip)
 print "Wrong specialty    : %s" % (numWrongSpecialty)
 
-print "\nFrom %s, deleted %s rows, leaving %s.\n" % (rowNum, newListLen-len(newList), len(newList))
+print "\nOf %s, deleted %s rows, keeping %s.\n" % (rowNum, newListLen-len(newList), len(newList))
 
 writeFile(newList, "newlistafterfilter")
 
@@ -150,7 +150,7 @@ writeFile(newList, "newlistafterfilter")
 
 ### Process incompleteList ###
 
-print "Processing incompleteList...\n"
+print "%s entries from OBME database have insufficient data to be safely filtered. Matching names from old list with incomplete entries...\n" % (len(incompleteList))
 
 rowNum = 0
 keepList = []
@@ -163,8 +163,7 @@ for incRow in incompleteList:
         else:
             pass
 
-print "%s entries in incompleteList.\n" % (len(incompleteList))
-print "%s entries kept.\n" % (len(keepList))
+print "%s matches found. The rest has been discarded.\n" % (len(keepList))
 
 writeFile(incompleteList, "incompletelist")
 writeFile(keepList, "keeplist")
@@ -182,12 +181,12 @@ oldUniqueNum = 0
 
 # m1List.append([])   # Append empty list to m1List.
 for col in oldList[0]:
-    print '%-3s: %s' % (colNum, col)   # Print column indices for oldList.
+    # print '%-3s: %s' % (colNum, col)   # Print column indices for oldList.
     # m1List[0].append(col)   # Populate label row of m1List.
     colNum += 1
 del oldList[0]   # Delete non-data row.
 
-print "\nMerging %s from oldList with %s from newList...\n" % (len(oldList), len(newList))
+print "\nMerging %s entries from old list with %s from filtered OBME database...\n" % (len(oldList), len(newList))
 
 # m1List[0].append('BIRTHYEAR')
 
@@ -201,7 +200,7 @@ for oldRow in oldList:
     for keepRow in keepList:
         if oldRow[1] == keepRow[0] and oldRow[2] == keepRow[1] and oldRow[3] == keepRow[2]:   # Check to see if name from oldList is in keepList.
             dupExists = True
-            print "Keeping: %s %s %s" % (keepRow[0], keepRow[1], keepRow[2])
+            # print "Keeping: %s %s %s" % (keepRow[0], keepRow[1], keepRow[2])
             break
     # TODO: Multiple choices for dupExists -- If entry is in newList, check to see if it should be updated. If entry is in keepList (i.e., incomplete), keep the old data.
     if dupExists:   # Do for every duplicate entry.
@@ -227,6 +226,7 @@ for oldRow in oldList:
         m1Row.append(oldRow[9])   # Zip
         m1Row.append(oldRow[10])   # Specialty  TODO: need lookup table for specialty codes.
         m1Row.append(newRow[6])   # Birthyear
+        m1Row.append(newRow[21])   # County
         m1List.append(m1Row)   # Add row to m1List.
         newList.remove(newRow)   # Remove duplicate row from newList.
         oldDupNum += 1
@@ -249,9 +249,10 @@ for newRow in newList:
     m1Row.append(newRow[19])   # Zip
     m1Row.append(newRow[32])   # Specialty
     m1Row.append(newRow[6])   # Birthyear
+    m1Row.append(newRow[21])   # County
     m1List.append(m1Row)   # Add reordered newRow to m1List.
 
-print "\nFrom %s in oldList, %s are in newList, leaving %s for deletion and %s in m1List.\n" % (len(oldList), oldDupNum, oldUniqueNum, len(m1List))
+print "\nOf %s in old list, %s are in filtered OBME database, leaving %s for deletion and %s in merge list 1.\n" % (len(oldList), oldDupNum, oldUniqueNum, len(m1List))
 
 # for entry in delList:
 #     print "Deleting: %s %s %s" % (entry[1], entry[2], entry[3])
@@ -271,34 +272,35 @@ rowNum = 0
 colNum = 0
 m2List = []   # Merge #2
 m2DupNum = 0
+pfDelNum = 0
 
 for col in pfList[0]:
     # print '%-3s: %s' % (colNum, col)   # Print column indices for pfList.
     colNum += 1
 del pfList[0]   # Delete non-data row.
 
-print "\nMerging %s from m1List with %s from pfList...\n" % (len(m1List), len(pfList))
+print "\nMerging %s entries from first merge with %s entries from PA/FNP list...\n" % (len(m1List), len(pfList))
 
 for row in pfList:
     colNum = 0
     emptyCols = []
     for col in row:
         row[colNum] = string.strip(col)   # Strip leading and trailing whitespace from entries.
-        # print '%-20s: %s' % (header[colNum], col)
         colNum += 1
 
 for m1Row in m1List:
-    dupExists = False   # Check if same person exists, but not necessarily with same details.
     for pfRow in pfList:
+        dupExists = False
         if m1Row[1] == pfRow[0] and m1Row[2] == pfRow[1] and m1Row[3] == pfRow[2]:   # Match first, middle, and last names.
+            row2Del = pfRow
             dupExists = True
+            m2DupNum += 1
+            # print "%s %s is a duplicate." % (pfRow[0], pfRow[2])
             break
-            # print "%s %s is a duplicate." % (newRow[0], newRow[2])
         else:
             pass
-    if dupExists:   # Do for every duplicate entry.
-        m2DupNum += 1
-        pfList.remove(pfRow)   # Remove duplicate entry.
+    if dupExists:
+        pfList.remove(row2Del)
 
 m2List.extend(m1List)   # Add m1List to m2List.
 
@@ -325,12 +327,14 @@ for pfRow in pfList:
         m2Row.append(pfRow[21])   # Zip
         m2Row.append(pfRow[35])   # Specialty
         m2Row.append(pfRow[8])   # Birthyear
+        m2Row.append(pfRow[23])   # County
         m2List.append(m2Row)   # Add reordered pfRow to m2List.
+    elif not keepThisRow:
+        pfDelNum += 1
 
-print "From %s in m1List, %s are in pfList, leaving %s in m2List.\n" % (len(m1List), m2DupNum, len(m2List))
+print "From %s in merge list 1, %s are in PA/FNP list. Deleting %s from PA/FNP list, leaving %s in final merge list.\n" % (len(m1List), m2DupNum, pfDelNum, len(m2List))
 
-m2List.insert(0, ['Title', 'First Name', 'Middle Name', 'Last Name', 'Company', 'Address 1', 'Address 2', 'City', 'State', 'Zip', 'Specialty', 'Birthyear'])
+m2List.insert(0, ['Title', 'First Name', 'Middle Name', 'Last Name', 'Company', 'Address 1', 'Address 2', 'City', 'State', 'Zip', 'Specialty', 'Birthyear', 'County'])
 
 writeFile(m2List, "m2list")
-
 
