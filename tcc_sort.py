@@ -6,16 +6,16 @@ import string
 #TODO: in program, keep all data in OBME format.
 
 oldFile = open('oldlist.csv', 'rU')   # Open old Clinic database.
-oldList = list(csv.reader(oldFile, delimiter=','))   # Cast csv read to list.
+oldList = list(csv.reader(oldFile, delimiter=',', quotechar='"'))   # Cast csv read to list.
 oldFile.close()
 
 newFile = open('newlist.csv', 'rU')   # Open new OBME database.
-newList = list(csv.reader(newFile, delimiter=','))   # Cast csv read to list.
+newList = list(csv.reader(newFile, delimiter=',', quotechar='"'))   # Cast csv read to list.
 newFile.close()
 
 def writeFile(listname, filename):
     outFile = open(filename+'.csv', 'wb')   # Open file to write.
-    writer = csv.writer(outFile, delimiter=',')
+    writer = csv.writer(outFile, delimiter=',', quotechar='"')
     writer.writerows(listname)
     outFile.close()
 
@@ -45,7 +45,7 @@ for row in newList:   # NOTE that in memory, row is separate from newList[rowNum
     colNum = 0
     emptyCols = []
     for col in row:
-        row[colNum] = string.strip(col)   # Strip leading and trailing whitespace from entries.
+        row[colNum] = col.strip()   # Strip leading and trailing whitespace from entries.
         # print '%-20s: %s' % (header[colNum], col)
         colNum += 1
 
@@ -112,7 +112,7 @@ for row in newList:   # NOTE that in memory, row is separate from newList[rowNum
     
     # Filter by specialty (some physicians have multiple specialties separated by commas).
     try:
-        spList = row[32].split(', ')
+        spList = [s.strip() for s in row[32].split(',')]
         for specialty in spList:
             if specialty == ('Acupuncture' or 'Addictionology' or 'Addiction Medicine' or 'Broncho-Esophagology' or 'Bloodbanking' or 'Claims Adjudicator' or 'Clinical Pathology' or 'Dermatopathology' or 'Diagnostic Radiology' or 'Emergency Medicine' or 'Forensic Pathology' or 'Medical Genetics' or 'Hospital Administration' or 'Hypnosis' or 'Industrial Medicine' or 'Legal Medicine' or 'Nuclear Medicine' or 'Nuclear Radiology' or 'Occupational Medicine' or 'Oral Surgery' or 'Pathology' or 'Pediatric Radiology' or 'Pharmacology' or 'Psychiatry Neurology' or 'Psychoanalysis' or 'Psychosomatic Medicine' or 'Radioisotopic Pathology' or 'Therapeutic Radiology' or 'Traumatic Surgery'):
                 newList[rowNum] = 0
@@ -139,20 +139,25 @@ writeFile(newList, "newlistafterfilter")
 
 ### Process incompleteList ###
 
-print "Processing incompleteList..."
+print "Processing incompleteList...\n"
 
 rowNum = 0
+keepList = []
 
-for row in incompleteList:
-    if row[17] == 'Portland':
-        incompleteList[rowNum] = 0
+for incRow in incompleteList:
+    for oldRow in oldList:
+        if oldRow[1] == incRow[0] and oldRow[2] == incRow[1] and oldRow[3] == incRow[2]:
+            keepList.append(incRow)
+            break
+        else:
+            pass
     rowNum += 1
 
-incompleteList[:] = [x for x in incompleteList if x != 0]
-
 print "%s entries in incompleteList.\n" % (len(incompleteList))
+print "%s entries kept.\n" % (len(keepList))
 
 writeFile(incompleteList, "incompletelist")
+writeFile(keepList, "keeplist")
 
 
 
@@ -183,7 +188,12 @@ for oldRow in oldList:
         if oldRow[1] == newRow[0] and oldRow[2] == newRow[1] and oldRow[3] == newRow[2]:   # Match first, middle, and last names.
             dupExists = True
             break
-            # print "%s %s is a duplicate." % (newRow[0], newRow[2])
+    for keepRow in keepList:
+        if oldRow[1] == keepRow[0] and oldRow[2] == keepRow[1] and oldRow[3] == keepRow[2]:
+            dupExists = True
+            print "Keeping: %s %s %s" % (keepRow[0], keepRow[1], keepRow[2])
+            break
+    # TODO: Multiple choices for dupExists -- If entry is in newList, check to see if it should be updated. If entry is in keepList (i.e., incomplete), keep the old data.
     if dupExists:   # Do for every duplicate entry.
         m1Row = []
         m1Row.append(oldRow[0])   # Title
@@ -231,7 +241,10 @@ for newRow in newList:
     m1Row.append(newRow[6])   # Birthyear
     m1List.append(m1Row)   # Add reordered newRow to m1List.
 
-print "From %s in oldList, %s are in newList, leaving %s for deletion and %s in m1List.\n" % (len(oldList), oldDupNum, oldUniqueNum, len(m1List))
+print "\nFrom %s in oldList, %s are in newList, leaving %s for deletion and %s in m1List.\n" % (len(oldList), oldDupNum, oldUniqueNum, len(m1List))
+
+# for entry in delList:
+#     print "Deleting: %s %s %s" % (entry[1], entry[2], entry[3])
 
 writeFile(m1List, "mergelist")
 writeFile(delList, "dellist")
@@ -241,7 +254,7 @@ writeFile(delList, "dellist")
 ### Process Ms. Corwin's PA/FNP list ###
 
 pfFile = open('pafnp.csv', 'rU')   # Open Ms. Corwin's PA and FNP database.
-pfList = list(csv.reader(pfFile, delimiter=','))   # Cast csv read to list.
+pfList = list(csv.reader(pfFile, delimiter=',', quotechar='"'))   # Cast csv read to list.
 pfFile.close()
 
 rowNum = 0
@@ -271,6 +284,8 @@ for m1Row in m1List:
             dupExists = True
             break
             # print "%s %s is a duplicate." % (newRow[0], newRow[2])
+        else:
+            pass
     if dupExists:   # Do for every duplicate entry.
         m2DupNum += 1
         pfList.remove(pfRow)   # Remove duplicate entry.
@@ -278,20 +293,29 @@ for m1Row in m1List:
 m2List.extend(m1List)   # Add m1List to m2List.
 
 for pfRow in pfList:
-    m2Row = []
-    m2Row.append(pfRow[5])   # Title
-    m2Row.append(pfRow[0])   # First name
-    m2Row.append(pfRow[1])   # Middle name
-    m2Row.append(pfRow[2])   # Last name
-    m2Row.append(pfRow[15])   # Company
-    m2Row.append(pfRow[9])   # addr1
-    m2Row.append(pfRow[10])   # addr2
-    m2Row.append(pfRow[17])   # City
-    m2Row.append(pfRow[18])   # State
-    m2Row.append(pfRow[19])   # Zip
-    m2Row.append(pfRow[32])   # Specialty
-    m2Row.append(pfRow[6])   # Birthyear
-    m2List.append(m2Row)   # Add reordered pfRow to m2List.
+    keepThisRow = False
+    if (pfRow[8] == '' and pfRow[9] == '' and pfRow[10] == '' and pfRow[11] == ''):   # Check for incompleteness (added by hand by Ms. Corwin).
+        keepThisRow = True
+    if pfRow[5] == '1':   # FTE
+        keepThisRow = True
+    if (pfRow[13] == 'Family Medicine' or pfRow[13] == 'Internal Medicine') and pfRow[12] == 'O':
+        keepThisRow = True
+
+    if keepThisRow:
+        m2Row = []
+        m2Row.append(pfRow[7])   # Title
+        m2Row.append(pfRow[0])   # First name
+        m2Row.append(pfRow[1])   # Middle name
+        m2Row.append(pfRow[2])   # Last name
+        m2Row.append(pfRow[8])   # Company
+        m2Row.append(pfRow[9])   # addr1
+        m2Row.append('')   # addr2
+        m2Row.append(pfRow[10])   # City
+        m2Row.append('OR')   # State
+        m2Row.append('')   # Zip
+        m2Row.append(pfRow[13])   # Specialty
+        m2Row.append('')   # Birthyear
+        m2List.append(m2Row)   # Add reordered pfRow to m2List.
 
 print "From %s in m1List, %s are in pfList, leaving %s in m2List.\n" % (len(m1List), m2DupNum, len(m2List))
 
