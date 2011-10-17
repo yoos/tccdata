@@ -36,11 +36,11 @@ Dr.,Stephen,John,Chaffee,Dallas Family Medicine,641 SE Miller Ave,,Dallas,OR,973
 Dr.,Mark,Stephen,Robertson,,950 29th Ave SW,,Albany,OR,97321,"Otology,Laryngology,"
 Dr.,John,Charles,Hadley,,PO Box 378,555 SE Washington St,Dallas,OR,97338,Family Medicine
 Dr.,Larry,Ray,Wampler,Samaritan Pacific Communities Hospital,611 SE 3rd St,830 SW Abbey St,Newport,OR,97365,Radiology
-Dr.,Kenneth,Earl,Tyson,Samaritan Pacific Women's Health Group,775 SW 9th St Ste H,,Newport,OR,97365,Obstetrics and Gynec
+Dr.,Kenneth,Earl,Tyson,Samaritan Pacific Women's Health Group,775 SW 9th St Ste H,,Newport,OR,97365,Obstetrics and Gynecology
 Dr.,Dana,Lynn,Kosmala,Samaritan Health Services,PO Box 2304,"701 N 5th Street, C-1020",Lebanon,OR,97355,Pediatrics
 ,David,Michael,Hufnagel,,501 NW Elks Dr,"483 Wheaton Rd, San Antonio, TX",Corvallis,OR,97330,Hematology
 Dr.,Daniel,Scott,Domrose,,2440 NW Professional Dr,2229 NW SANTIAM HWY,Corvallis,OR,97330,Podiatry
-Dr.,Paul,Burke,Daskalos,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynec
+Dr.,Paul,Burke,Daskalos,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynecology
 Dr.,Jerry,Lyn,Flaming,Samaritan Depoe Bay Clinic,PO Box 1036,Mall 101 Ste A,Depoe Bay,OR,97341,Family Practice
 Dr.,David,Geoffrey Martin,Myers,Corvallis Heartspring Wellness Center,990 NW Circle Blvd,,Corvallis,OR,97330,Family Medicine
 Dr.,Gael,Anne,Wheeler,Heartspring Wellness Center,990 NW Circle Blvd,4164 NW Peppertree PL,Corvallis,OR,97330,Family Medicine
@@ -82,7 +82,7 @@ Dr.,William,Joseph,Origer,Samaritan Health Services,1046 6th Ave SW,,Albany,OR,9
 Dr.,William,Marvin,Gaskill,Samaritan Albany General Hospital,1046 Sixth Ave SW,30629 Bellfountain Rd,Albany,OR,97321,Family Medicine
 Dr.,Harry,Tony,Adamo,Samaritan Albany General Hospital,1046 6th Ave SW,"40171 York Lane, Springfield",Albany,OR,97321,Family Practice
 Dr.,Beverley,Elizabeth,Phillipson,Lincoln Community Health Center,PO Box 652,1010 SW Hwy 101,Gleneden Beach,OR,97388,Internal Medicine
-Dr.,Cheryl,Lynn,Marier,Samaritan Albany General Hospital,"705 Elm St SW, Ste 200",1046 6th Ave SW,Albany,OR,97321,Obstetrics and Gynecology
+Dr.,Cheryl,Lynn,Marier,Samaritan Albany General Hospital,"705 Elm St SW, Ste 200",1046 6th Ave SW,Albany,OR,97321,Obstetrics and Gynecologyology
 Dr.,John,Fredrick,Watkins,Samaritan Pacific Internal Medicine,1010 SW Coast Hwy Ste 201,,Newport,OR,97365,Internal Medicine
 Dr.,Stewart,,Tuft,Siletz Community Health Clinic,PO Box 320,107 SE Swan Ave,Siletz,OR,97380,Family Practice
 Dr.,Stephen,Macbain,Burns,Siletz Community Health Clinic,775 SW 9th St Annex A,107 SE Swan Ave,Newport,OR,97365,Pediatrics
@@ -166,7 +166,7 @@ Dr.,Thomas,Augustine,Vanveen,Santiam Medical Clinic,1288 N Evergreen Ave,280 S 1
 Dr.,Lloyd,Harvey,Wiggins,,2743 NW Rolling Green Dr,7275 NW Mountain View Dr,Corvallis,OR,97330,Internal Medicine
 Dr.,Darrell,Eugene,Genstler,Genstler Eye Center,2700 14th Ave SE,,Albany,OR,97321,Ophthalmology
 Dr.,Karl,Douglas,Ordelheide,Lincoln City Medical Center,2870 West Devils Lake Rd,,Lincoln City,OR,97367,Internal Medicine
-Dr.,Michael,Golden,Cheek,Lincoln City Medical Center,2870 West Devils Lake Rd,,Lincoln City,OR,97367,Obstetrics and Gynec
+Dr.,Michael,Golden,Cheek,Lincoln City Medical Center,2870 West Devils Lake Rd,,Lincoln City,OR,97367,Obstetrics and Gynecology
 Dr.,Marilyn,Jean,Fraser,Lincoln City Medical Center,2870 NE West Devils Lake Rd,,Lincoln City,OR,97367,Family Practice
 Dr.,John,Edward,Bohlman,Lincoln City Medical Center,2870 NE West Devils Lake Rd,,Lincoln City,OR,97367,"Internal Medicine, E"
 Dr.,Michael,Comerford,Egan,Samaritan Surgical Clinic,3100 NE 28th St Ste B,,Lincoln City,OR,97367,General Surgery
@@ -208,14 +208,14 @@ Dr.,Michelle,Marie,Ryan,Samaritan Rheumatology,990 NW Circle Blvd Ste 101,,Corva
 Dr.,Clifford,Allan,Hall,Good Samaritan Regional Medical Center,3600 NW Samaritan Dr,"PO Box 490, Philomath",Corvallis,OR,97330,Internal Medicine
 Dr.,Barry,Charles,Smith,Good Samaritan Regional Medical Center,3600 NW Samaritan Dr,4569 NW Boxwood Dr,Corvallis,OR,97330,Internal Medicine
 Dr.,Kien,,Huynh,Good Samaritan Regional Medical Center,3600 NW Samaritan Dr,,Corvallis,OR,97330,Internal Medicine
-Dr.,Timothy,Carlton,Atha,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E350,,Corvallis,OR,97330,Cardiovascular Disea
+Dr.,Timothy,Carlton,Atha,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E350,,Corvallis,OR,97330,Cardiovascular Disease
 Dr.,Matthew,Lee,Lindberg,Samaritan Health & Vascular Institute,3600 NW Samaritan Dr Ste E350,,Corvallis,OR,97330,Cardiology
-Dr.,Mark,Anthony,Taylor,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste 227,,Corvallis,OR,97330,Cardiovascular Surge
+Dr.,Mark,Anthony,Taylor,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste 227,,Corvallis,OR,97330,Cardiovascular Surgery
 Dr.,Jennifer,Anne Nelson,Smits,Good Samaritan Regional Medical Center,3600 NW Samaritan Dr Ste 4H427,,Corvallis,OR,97330,Internal Medicine
 Dr.,Deborah,Anne,Hughes,Good Samaritan Regional Medical Center,3600 NW Samaritan Dr,2917 53rd Ave SW,Corvallis,OR,97330,"Internal Medicine, C"
 Dr.,Sharon,Fink,Lissman,Good Samaritan Regional Medical Center,3600 NW Samaritan Dr,6035 NW Rosewood Dr,Corvallis,OR,97330,Internal Medicine
 Dr.,Randall,Vincent,Bream,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E350,,Corvallis,OR,97330,Cardiology
-Dr.,Edward,John,Toggart,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E350,,Corvallis,OR,97330,Cardiovascular Disea
+Dr.,Edward,John,Toggart,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E350,,Corvallis,OR,97330,Cardiovascular Disease
 Dr.,Thomas,Logan,Marker,Samaritan Health & Vascular Institute,3600 NW Samaritan Drive Ste E350,,Corvallis,OR,97330,Cardiology
 Dr.,Donald,Eugene,Yarbrough,Samaritan Surgical Specialists,3615 NW Samaritan Dr Ste 201,7620 NW Hood View Circle,Corvallis,OR,97330,General Surgery
 Dr.,Marie,Louise,Long,,3615 NW Samaritan Dr Ste 211,,Corvallis,OR,97330,Neurological Surgery
@@ -238,30 +238,30 @@ Dr.,Vyacheslav,Yuryevich,Melnikov,Samaritan Kidney Specialists,3615 NW Samaritan
 Dr.,Michael,John,Malos,Samaritan Neurosurgery,3615 NW SAMARITAN DR STE 211,"PO Box 10067, Eugene",Corvallis,OR,97330,Neurological Surgery
 Dr.,Steven,Kent,Goodwin,Samaritan Neurosurgery,3615 NW Samaritan Dr Ste 211,,Corvallis,OR,97330,Neurological Surgery
 Dr.,Walter,Scott,Williams,,PO Box 579,530 NW 27th St,Corvallis,OR,97330,Family Practice
-Dr.,William,Fredrick,Cely,,PO Box 87,,Seal Rock,OR,97376,Obstetrics and Gynec
+Dr.,William,Fredrick,Cely,,PO Box 87,,Seal Rock,OR,97376,Obstetrics and Gynecology
 Ms.,Catherine,Raili,Dudley,,1128 NE Second St Ste 101,,Corvallis,OR,97330,Internal Medicine
 Dr.,James,Anthony,Ryan,Samaritan Orthopedic & Sports Medicine,3640 NW Samaritan Dr,,Corvallis,OR,97330,Orthopedic Surgery
 Dr.,William,Emerson,Muth,Samaritan Infectious Disease,3640 NW Samaritan Dr Ste 210,,Corvallis,OR,97330,Infectious Diseases
 Dr.,Peter,Ching,Tsai,Samaritan Orthopaedics and Sports Medici,3620 NW Samaritan Dr Ste 202,,Corvallis,OR,97330-4714,Orthopedic Surgery
 Dr.,Jacqueline,Jill,Krumrey,Samaritan Orthopaedics and Sports Medici,3640 NW Samaritan Dr Ste 160,,Corvallis,OR,97330,Orthopedic Surgery
-Dr.,Cynthia,Ann,Noble,Samaritan Obstetrics and Gynecology,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynec
-Dr.,Andrea,Joy,McCann,Samaritan OB/GYN,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynec
-Dr.,Sarah,Lynn,Vander Pol,Samaritan Obstetrics & Gynecology,3640 NW Samaritan Dr Ste 270,4447 NW Honeysuckle Dr,Corvallis,OR,97330,Obstetrics and Gynec
-Dr.,Jodell,Jane,Boyle,Samaritan Obstetrics and Gynecology,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynec
+Dr.,Cynthia,Ann,Noble,Samaritan Obstetrics and Gynecologyology,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynecology
+Dr.,Andrea,Joy,McCann,Samaritan OB/GYN,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynecology
+Dr.,Sarah,Lynn,Vander Pol,Samaritan Obstetrics & Gynecology,3640 NW Samaritan Dr Ste 270,4447 NW Honeysuckle Dr,Corvallis,OR,97330,Obstetrics and Gynecology
+Dr.,Jodell,Jane,Boyle,Samaritan Obstetrics and Gynecologyology,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynecology
 Dr.,Sugat,,Patel,Samaritan Infectious Disease,3640 NW Samaritan Dr Ste 210,,Corvallis,OR,97330,Infectious Diseases
 Dr.,Stephen,Roy,Newman,Samaritan Mid-Valley Orthopedics,400 Hickory St NW Ste 200,,Albany,OR,97321,Orthopedic Surgery
-Dr.,Natalie,Jean,Hoshaw,Samaritan Obstetrics and Gynecology,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynec
+Dr.,Natalie,Jean,Hoshaw,Samaritan Obstetrics and Gynecologyology,3640 NW Samaritan Dr Ste 270,,Corvallis,OR,97330,Obstetrics and Gynecology
 Dr.,Matthew,Dean,Zollinger,Samaritan Mid-Valley Internal Medicine &,400 Hickory St NW Ste 300,,Albany,OR,97321,"Pediatrics, Internal"
 Dr.,Jeremy,Scott,Bedtelyon,Samaritan Mid-Valley Internal Medicine &,400 Hickory St NW Ste 300,,Albany,OR,97321,Internal Medicine
 Dr.,Michael,Gerard,Sherman,Samaritan Mid-Valley Internal Medicine &,400 Hickory Street NW Ste 300,,Albany,OR,97321,Pediatrics
 Dr.,Rick,Dean,Stanley,Samaritan Mid-Valley Orthopedics,400 Hickory St NW Ste 200,,Albany,OR,97321,Orthopedic Surgery
 Ms.,Janice,Lynn,Hoida,,464 Martin Way S,1430 Monmouth St,Monmouth,OR,97361,Family Practice
-Dr.,Glenn,Scott,Huerta-Enochian,Samaritan Gynecology & Surgical Associat,400 NW Walnut Blvd Ste 300,,Corvallis,OR,97330,Obstetrics and Gynec
+Dr.,Glenn,Scott,Huerta-Enochian,Samaritan Gynecology & Surgical Associat,400 NW Walnut Blvd Ste 300,,Corvallis,OR,97330,Obstetrics and Gynecology
 Dr.,Jess,W,Hickerson,Samaritan Gynecology & Surgical Assoc,400 NW Walnut Blvd Ste 300,,Corvallis,OR,97330,Gynecology
 Dr.,Steven,Donald,Simon,Samaritan North Albany Urgent Care,400 NW Hickory Ave Ste 303,,Albany,OR,97321,Family Practice
-Dr.,Linda,Kay,Fox,Samaritan Gynecology & Surgical Assoc.,400 NW Walnut Blvd Ste 300,4243 NW Pintail Pl,Corvallis,OR,97330,Obstetrics and Gynec
+Dr.,Linda,Kay,Fox,Samaritan Gynecology & Surgical Assoc.,400 NW Walnut Blvd Ste 300,4243 NW Pintail Pl,Corvallis,OR,97330,Obstetrics and Gynecology
 Dr.,Janine,Natalie,Hein,Mid-Valley Medical Plaza,425 N Santiam Hwy,,Lebanon,OR,97355,Family Practice
-Dr.,Kimberly,Lu,James,Mid Valley OB/GYN,701 N Fifth St C1020,,Lebanon,OR,97355,Obstetrics and Gynec
+Dr.,Kimberly,Lu,James,Mid Valley OB/GYN,701 N Fifth St C1020,,Lebanon,OR,97355,Obstetrics and Gynecology
 Dr.,Bruce,Edward,Matthews,Mid-Valley Medical Plaza,425 N Santiam Hwy,,Lebanon,OR,97355,"Family Practice, Add"
 Dr.,John,Edward,Hein,Mid-Valley Medical Plaza,425 N Santiam Hwy,,Lebanon,OR,97355,Family Medicine
 Dr.,Mary,Lou Lucill,Belozer,Mid Valley Medical Plaza,425 N Santiam Hwy,,Lebanon,OR,97355,Family Practice
@@ -269,7 +269,7 @@ Dr.,Richard,Carl,Wopat,Mid-Valley Medical Plaza,425 N Santiam Hwy,37967 Ridgetop
 Dr.,Richard,Loren,Alley,Mid-Valley Medical Plaza,425 N Santiam Hwy,35656 Truelove Dr,Lebanon,OR,97355,General Practice
 Dr.,Janice,Lynn,Frost,Willamette Cardiology,410 NW Walnut Blvd,,Corvallis,OR,97330,Cardiology
 Dr.,Christopher,Whitney,Collier,Mid-Valley Medical Plaza,425 N Santiam Hwy,,Lebanon,OR,97355,Family Medicine
-Dr.,Diane,Louise,Leyba,Mid-Valley OB/GYN,425 N Santiam Hwy,,Lebanon,OR,97355,Obstetrics and Gynec
+Dr.,Diane,Louise,Leyba,Mid-Valley OB/GYN,425 N Santiam Hwy,,Lebanon,OR,97355,Obstetrics and Gynecology
 Dr.,Sedrick,Alan,Salisbury,,425 N Santiam Hwy,,Lebanon,OR,97355,Internal Medicine
 Dr.,Cindy,Jean,Smith,,4455 NE Highway 20,,Corvallis,OR,97330,Psychiatry
 Dr.,Charles,Phillip,Essex,,512 Main St Ste 300,16320 W Ellendale Rd,Dallas,OR,97338,Family Medicine
@@ -299,17 +299,17 @@ Dr.,Albert,Edward,Ryckman,,631 Elm St SW Ste 202,,Albany,OR,97321,Gastroenterolo
 Dr.,Alan,Laird,Embry,Community Health Center,610 Dragon Dr,530 NW 27th St,Monroe,OR,97456,Family Practice
 Dr.,Christopher,Wray,Edwardson,Dallas Family Medicine,641 SE Miller Ave,,Dallas,OR,97338,Family Practice
 Dr.,Alan,Noel,Blake,Sweet Home Family Medicine,679 Main St,,Sweet Home,OR,97386,Family Practice
-Dr.,Charles,Daniel,South,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynec
+Dr.,Charles,Daniel,South,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynecology
 Dr.,Timothy,Edward,Hindmarsh,Sweet Home Family Medicine,679 Main St,,Sweet Home,OR,97386,Family Practice
 Dr.,May,Ann,Hindmarsh,Sweet Home Family Medicine,679 Main St,,Sweet Home,OR,97386,Family Practice
-Dr.,Rodney,Louis,Wren,Wren Obstetrics & Gynecology,631 Elm SW Ste 204,,Albany,OR,97321,Obstetrics and Gynec
+Dr.,Rodney,Louis,Wren,Wren Obstetrics & Gynecology,631 Elm SW Ste 204,,Albany,OR,97321,Obstetrics and Gynecology
 Dr.,Robert,Gary,Moore,Samaritan Urology Albany,631 Elm St SW Ste 201,,Albany,OR,97321,Urology
-Dr.,Margaret,Anne,Hovey,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynec
+Dr.,Margaret,Anne,Hovey,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynecology
 Dr.,Kara,Melissa,Knowles,Mid-Valley Children's Clinic,734 Elm St SW,,Albany,OR,97321,Pediatrics
 Dr.,Neda,,Afzali,Mid-Valley Children's Clinic,734 Elm St SW,,Albany,OR,97321,Pediatrics
 Dr.,Adam,Bradley,Paul,Mid-Valley Children's Clinic,734 Elm St SW,,Albany,OR,97321,Pediatrics
-Dr.,Shane,Matthew,Gjesdal,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,4391 NW Bramblewood CT,Albany,OR,97321,Obstetrics and Gynec
-Dr.,Jonathan,Lorenzo,Larsen,Albany Obstetrics and Gynecology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynec
+Dr.,Shane,Matthew,Gjesdal,Albany Obstetrics & Gynecology,705 Elm St SW Ste 200,4391 NW Bramblewood CT,Albany,OR,97321,Obstetrics and Gynecology
+Dr.,Jonathan,Lorenzo,Larsen,Albany Obstetrics and Gynecologyology,705 Elm St SW Ste 200,,Albany,OR,97321,Obstetrics and Gynecology
 Dr.,Marie,Annette,Ray,Samaritan Albany Surgical Associates,705 Elm St SW Ste 300,,Albany,OR,97321,General Surgery
 Dr.,Mary,Kay,Harada,Samaritan Albany Surgical Associates,705 Elm St SW Ste 300,,Albany,OR,97321,General Surgery
 Dr.,Gregg,Monroe,Miller,Samaritan Albany Surgical Associates,705 ELM ST SW STE 300,,Albany,OR,97321,General Surgery
@@ -322,12 +322,12 @@ Dr.,Bryan,Duane,Harris,Central Coast Internal Medicine,775 SW 9th St Ste B,,Newp
 Dr.,Sean,Michael,Rash,,775 SW 9th St Annex A,,Newport,OR,97365,Pediatrics
 Dr.,Dana,Paige,Salisbury,Mid-Valley Children's Clinic,734 SW Elm St,,Albany,OR,97321,Pediatrics
 Dr.,David,Craig,Long,Central Coast Internal Medicine,775 SW 9th St Ste B,,Newport,OR,97365,Internal Medicine
-Dr.,Michael,Paul,Adler,Samaritan Pacific Women's Health,775 SW 9th St Ste H,,Newport,OR,97365,Obstetrics and Gynec
+Dr.,Michael,Paul,Adler,Samaritan Pacific Women's Health,775 SW 9th St Ste H,,Newport,OR,97365,Obstetrics and Gynecology
 Dr.,Robert,Sanford,Rapp,Family Practice Resident Clinic,750 Laurel Pl,,Albany,OR,97321,Allergy
 Dr.,Kristin,Briana,Bradford,,530 NW 27th St,PO Box 579,Corvallis,OR,97330,"Preventive Medicine,"
 Dr.,Carl,Robert,Hall,,PO Box 368,,Albany,OR,97321,Urology
 Dr.,Robbie,Ned,Nebeker,,530 NW 27th St,PO Box 579,Corvallis,OR,97339,Psychiatry
-Dr.,Megumi,,Morishita,Pacific Women's Health Group,775 SW 9th St Ste H,,Newport,OR,97365,Obstetrics and Gynec
+Dr.,Megumi,,Morishita,Pacific Women's Health Group,775 SW 9th St Ste H,,Newport,OR,97365,Obstetrics and Gynecology
 Dr.,John,Baptiste,Lehrer,,775 SW 9TH ST STE G,,Newport,OR,97365,Family Practice
 Dr.,Wayland,Sherrod,Lee,Samaritan Pacific ENT & Allergy,904 SW Bay St,,Newport,OR,97365,"Otology,Laryngology,"
 Dr.,Nicola,,Chikkalingaiah,"Community Outreach Inc., Medical Clinic",865 NW Reiman Ave,3790 NW Wisteria Way,Corvallis,OR,97330,Family Practice
@@ -372,16 +372,16 @@ Ms.,Dena,Marie,Young,Corvallis Gastroenterology,3517 NW Samaritan Dr Ste 101,,Co
 Ms.,Jacque,Falk,Davis,Corvallis Gastroenterology,3517 NW Samaritan Dr Ste 101,,Corvallis,OR,97330,"Physician Assistant,"
 Ms.,Kristen,Henry,Reeve,Corvallis Gastroenterology,3517 NW Samaritan Dr Ste 101,,Corvallis,OR,97330,Gastroenterology
 Ms.,Pamela,Kleis,Trimmer,Samaritan Family Medicine,3517 NW Samaritan Dr Ste 201,,Corvallis,OR,97330,Family Practice
-Mr.,Benjamin,Pantone,Wallace,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E227,6955 Pinot Pl NW,Corvallis,OR,97330,Cardiovascular Surge
-Ms.,Charla,LeAnn,Staggs,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste 227,,Corvallis,OR,97330,Cardiovascular Surge
-Mr.,Daniel,James,Zimmerman,Samaritan Health Services,3600 NW Samaritan Dr Ste 227,1585 NW Emperor Dr,Corvallis,OR,97330,Cardiovascular Surge
+Mr.,Benjamin,Pantone,Wallace,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E227,6955 Pinot Pl NW,Corvallis,OR,97330,Cardiovascular Surgery
+Ms.,Charla,LeAnn,Staggs,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste 227,,Corvallis,OR,97330,Cardiovascular Surgery
+Mr.,Daniel,James,Zimmerman,Samaritan Health Services,3600 NW Samaritan Dr Ste 227,1585 NW Emperor Dr,Corvallis,OR,97330,Cardiovascular Surgery
 Ms.,Darci,Lynn,Glass,,3640 NW Samaritan Dr Ste 160,,Corvallis,OR,97330,Orthopedic Surgery
 Ms.,Susan,Wilson,Rosen,Monroe Health Center,610 Dragon Dr,,Monroe,OR,97456,Family Practice
 Mr.,Scott,Joseph,Barlow,Samaritan Surgical Specialists,3615 NW Samaritan Dr Ste 201,,Corvallis,OR,97330,General Surgery
 Ms.,Maggie,Eileen,Grimes,Samaritan Caridology,3600 NW Samaritan Dr Ste E30,,Corvallis,OR,97330,Physician Assistant
-Mr.,John,Narcisco,Navarro,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E227,,Corvallis,OR,97339,Cardiovascular Surge
+Mr.,John,Narcisco,Navarro,Samaritan Heart & Vascular Institute,3600 NW Samaritan Dr Ste E227,,Corvallis,OR,97339,Cardiovascular Surgery
 Ms.,Lisa,Rene,Araneta,Samaritan Kidney Specialists,3615 NW Samaritan Dr Ste 203,2895 NW Huckleberry Dr,Corvallis,OR,97330,"Physician Assistant,"
-Ms.,Antonina,Pavlovna,Strickland,Cardiovascular Consultants of Oregon,3600 NW Samaritan Dr Ste E-350,,Corvallis,OR,97330,Cardiovascular Surge
+Ms.,Antonina,Pavlovna,Strickland,Cardiovascular Consultants of Oregon,3600 NW Samaritan Dr Ste E-350,,Corvallis,OR,97330,Cardiovascular Surgery
 Ms.,Christina,Marie,Lee,Samaritan Surgical Specialists,3615 NW Samaritan Dr Ste 201,,Corvallis,OR,97330,General Surgery
 Ms.,Kathleen,Julia,Thompson,Samaritan Health & Vascular Institute,3600 NW Samaritan Dr Ste E350,,Corvallis,OR,97330,Cardiology
 Mr.,David,Raul,Reavis,Samaritan Surgical Specialists,3615 NW Samaritan Dr Ste 201,4200 NW Walnut Pl #12,Corvallis,OR,97330,General Surgery

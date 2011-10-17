@@ -38,6 +38,7 @@ print "\nProcessing %s entries...\n" % (newListLen)
 numNotActive = 0
 numWrongLicense = 0
 numWrongCounty = 0
+numWrongState = 0   # Was not in instructions, but some entries have mismatching county and state.
 numWrongZip = 0
 numWrongSpecialty = 0
 
@@ -95,6 +96,15 @@ for row in newList:   # NOTE that in memory, row is separate from newList[rowNum
     except TypeError:
         pass
 
+    # Filter by state.
+    try:
+        if row[18] != 'OR':
+            newList[rowNum] = 0
+            # row = 0
+            numWrongState += 1
+    except TypeError:
+        pass
+
     # Filter by zip code.
     try:
         if (row[21] == 'Polk' and (row[19] != '97361' and \
@@ -128,6 +138,7 @@ newList[:] = [x for x in newList if x != 0]   # Remove all instances of 0. Note 
 print "Inactive           : %s" % (numNotActive)
 print "Wrong license type : %s" % (numWrongLicense)
 print "Wrong county       : %s" % (numWrongCounty)
+print "Wrong state        : %s" % (numWrongState)
 print "Wrong zip code     : %s" % (numWrongZip)
 print "Wrong specialty    : %s" % (numWrongSpecialty)
 
@@ -151,7 +162,6 @@ for incRow in incompleteList:
             break
         else:
             pass
-    rowNum += 1
 
 print "%s entries in incompleteList.\n" % (len(incompleteList))
 print "%s entries kept.\n" % (len(keepList))
@@ -183,13 +193,13 @@ print "\nMerging %s from oldList with %s from newList...\n" % (len(oldList), len
 
 # Merge in old entries first.
 for oldRow in oldList:
-    dupExists = False   # Check if same person exists, but not necessarily with same details.
+    dupExists = False
     for newRow in newList:
         if oldRow[1] == newRow[0] and oldRow[2] == newRow[1] and oldRow[3] == newRow[2]:   # Match first, middle, and last names.
             dupExists = True
             break
     for keepRow in keepList:
-        if oldRow[1] == keepRow[0] and oldRow[2] == keepRow[1] and oldRow[3] == keepRow[2]:
+        if oldRow[1] == keepRow[0] and oldRow[2] == keepRow[1] and oldRow[3] == keepRow[2]:   # Check to see if name from oldList is in keepList.
             dupExists = True
             print "Keeping: %s %s %s" % (keepRow[0], keepRow[1], keepRow[2])
             break
@@ -246,7 +256,7 @@ print "\nFrom %s in oldList, %s are in newList, leaving %s for deletion and %s i
 # for entry in delList:
 #     print "Deleting: %s %s %s" % (entry[1], entry[2], entry[3])
 
-writeFile(m1List, "mergelist")
+writeFile(m1List, "m1list")
 writeFile(delList, "dellist")
 
 
@@ -294,11 +304,11 @@ m2List.extend(m1List)   # Add m1List to m2List.
 
 for pfRow in pfList:
     keepThisRow = False
-    if (pfRow[8] == '' and pfRow[9] == '' and pfRow[10] == '' and pfRow[11] == ''):   # Check for incompleteness (added by hand by Ms. Corwin).
+    if (pfRow[9] == '' and pfRow[10] == '' and pfRow[11] == '' and pfRow[12] == ''):   # Check for incompleteness (added by hand by Ms. Corwin).
         keepThisRow = True
     if pfRow[5] == '1':   # FTE
         keepThisRow = True
-    if (pfRow[13] == 'Family Medicine' or pfRow[13] == 'Internal Medicine') and pfRow[12] == 'O':
+    if (pfRow[35] == 'Family Medicine' or pfRow[35] == 'Internal Medicine') and pfRow[34] == 'O':   # Specialty and inpatient/outpatient status.
         keepThisRow = True
 
     if keepThisRow:
@@ -307,17 +317,19 @@ for pfRow in pfList:
         m2Row.append(pfRow[0])   # First name
         m2Row.append(pfRow[1])   # Middle name
         m2Row.append(pfRow[2])   # Last name
-        m2Row.append(pfRow[8])   # Company
-        m2Row.append(pfRow[9])   # addr1
-        m2Row.append('')   # addr2
-        m2Row.append(pfRow[10])   # City
-        m2Row.append('OR')   # State
-        m2Row.append('')   # Zip
-        m2Row.append(pfRow[13])   # Specialty
-        m2Row.append('')   # Birthyear
+        m2Row.append(pfRow[17])   # Company
+        m2Row.append(pfRow[11])   # addr1
+        m2Row.append(pfRow[12])   # addr2
+        m2Row.append(pfRow[19])   # City
+        m2Row.append(pfRow[20])   # State
+        m2Row.append(pfRow[21])   # Zip
+        m2Row.append(pfRow[35])   # Specialty
+        m2Row.append(pfRow[8])   # Birthyear
         m2List.append(m2Row)   # Add reordered pfRow to m2List.
 
 print "From %s in m1List, %s are in pfList, leaving %s in m2List.\n" % (len(m1List), m2DupNum, len(m2List))
+
+m2List.insert(0, ['Title', 'First Name', 'Middle Name', 'Last Name', 'Company', 'Address 1', 'Address 2', 'City', 'State', 'Zip', 'Specialty', 'Birthyear'])
 
 writeFile(m2List, "m2list")
 
